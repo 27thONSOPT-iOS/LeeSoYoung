@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = " Home "
         NotificationCenter.default.addObserver(self, selector: #selector(dataStoF), name: Notification.Name("loginClicked"), object: nil)
         // Do any additional setup after loading the view.
     }

@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = " Login "
+        self.navigationItem.title = " Login "
         self.navigationController?.navigationBar.tintColor = .white
         // Do any additional setup after loading the view.
     }
