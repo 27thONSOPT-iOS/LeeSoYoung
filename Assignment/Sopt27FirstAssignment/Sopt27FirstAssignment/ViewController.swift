@@ -22,11 +22,11 @@ class ViewController: UIViewController {
     @IBAction func goToLoginClicked(_ sender: Any) {
         print("Btn goToLoginClicked")
         
-        guard let svc = self.storyboard?.instantiateViewController(withIdentifier:"SecondViewController") as? SecondViewController else {
+        guard let svc = self.storyboard?.instantiateViewController(identifier:"SecondViewController") else {
             return
         }
-        
-        self.navigationController?.pushViewController(svc, animated: true) // 다음 뷰 띄우기
+        svc.modalPresentationStyle = .fullScreen
+        self.present(svc, animated: true, completion: nil) // 다음 뷰 띄우기
     }
     
     

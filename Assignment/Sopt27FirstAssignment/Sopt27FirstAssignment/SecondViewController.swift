@@ -26,7 +26,7 @@ class SecondViewController: UIViewController {
         ad?.name = loginNameTF.text!
         
         NotificationCenter.default.post(name: Notification.Name("loginClicked"), object: nil)
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func goToSignUpClicked(_ sender: Any) {
