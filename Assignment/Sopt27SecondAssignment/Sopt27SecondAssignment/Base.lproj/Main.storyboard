@@ -108,7 +108,7 @@
                                     <constraint firstItem="CtO-WP-7Lj" firstAttribute="leading" secondItem="Zfs-Nw-EPR" secondAttribute="leading" constant="17" id="tNZ-Ih-zcU"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-DH-Znf">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-DH-Znf">
                                 <rect key="frame" x="0.0" y="88" width="375" height="1912"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whT-ZU-bT1">
