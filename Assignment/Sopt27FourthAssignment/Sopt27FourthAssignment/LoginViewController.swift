@@ -42,7 +42,7 @@ extension LoginViewController: UITextFieldDelegate {
             if let keyboardFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let keyboardRectangle = keyboardFrame.cgRectValue
                 let keyboardHeight = keyboardRectangle.height
-                self.view.frame.origin.y -= keyboardHeight
+                self.view.frame.origin.y -= keyboardHeight/2
             }
             print("keyboard Will appear Execute")
         }
@@ -53,7 +53,7 @@ extension LoginViewController: UITextFieldDelegate {
             if let keyboardFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 let keyboardRectangle = keyboardFrame.cgRectValue
                 let keyboardHeight = keyboardRectangle.height
-                self.view.frame.origin.y += keyboardHeight
+                self.view.frame.origin.y += keyboardHeight/2
             }
             print("keyboard Will Disappear Execute")
         }
@@ -78,5 +78,7 @@ extension LoginViewController: UITextFieldDelegate {
         self.view.frame.origin.y = self.restoreFrameValue
         return true
     }
+    
+    
     
 }

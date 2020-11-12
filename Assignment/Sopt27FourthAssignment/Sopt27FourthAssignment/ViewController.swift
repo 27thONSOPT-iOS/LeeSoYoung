@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
 
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -33,6 +33,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.topView.transform = CGAffineTransform(translationX: 0, y: -(self.topView.frame.height))
+                
+            })
+           
+        } else {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.topView.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
+        }
+    }
+    
+    // scroll 멈추면 실행
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.topView.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
+        }
     }
     
     // 헤더 설정
@@ -75,7 +98,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
-   
+    
     
     
     
