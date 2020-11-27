@@ -21,3 +21,5 @@
 * :pencil2: [3week](https://github.com/27thONSOPT-iOS/LeeSoYoung/blob/master/3week/Sopt27ThirdAssignment/README.md) collectionView 활용
 
 * :pencil2: [4week](https://github.com/27thONSOPT-iOS/LeeSoYoung/blob/master/4week/Sopt27FourthAssignment/README.md) tabBar / animate 활용
+
+* :pencil2: 주혁님 !! 이번주 과제 6주차 seminar에 있습니다 !!! ㅎㅎㅎ
